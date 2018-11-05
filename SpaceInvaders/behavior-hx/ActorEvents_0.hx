@@ -78,7 +78,7 @@ class ActorEvents_0 extends ActorScript
 	{
 		super(actor);
 		nameMap.set("Ship Speed", "_ShipSpeed");
-		_ShipSpeed = 20;
+		_ShipSpeed = 20.0;
 		
 	}
 	
@@ -96,11 +96,27 @@ class ActorEvents_0 extends ActorScript
 				}
 				else if(isKeyDown("left"))
 				{
-					
+					actor.setXVelocity(-(_ShipSpeed));
 				}
 				else if((!(isKeyDown("right")) && !(isKeyDown("left"))))
 				{
-					actor.setXVelocity();
+					actor.setXVelocity(0);
+				}
+			}
+		});
+		
+		/* ======================== When Updating ========================= */
+		addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+		{
+			if(wrapper.enabled)
+			{
+				if((actor.getScreenX() < 0))
+				{
+					actor.setX(1);
+				}
+				else if((actor.getScreenX() > (getScreenWidth() - (actor.getWidth()))))
+				{
+					actor.setX(1);
 				}
 			}
 		});

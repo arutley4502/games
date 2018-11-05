@@ -2,13 +2,14 @@
 <groups>
     <group eventID="2" id="0">
         <init comment="false" x="15" y="15">
-            <group eventID="2" id="-1">
-                <play-sound4 comment="false" x="26" y="40">
-                    <int id="0" val="0"/>
-                    <sound eid="8" id="1"/>
-                </play-sound4>
-            </group>
+            <group eventID="2" id="-1"/>
         </init>
+    </group>
+    <group eventID="2" id="1">
+        <play-sound4 comment="false" x="25" y="39">
+            <int id="0" val="0"/>
+            <sound eid="8" id="1"/>
+        </play-sound4>
     </group>
     <group eventID="2" id="-1"/>
 </groups>

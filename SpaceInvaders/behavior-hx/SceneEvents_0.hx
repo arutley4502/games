@@ -84,7 +84,7 @@ class SceneEvents_0 extends SceneScript
 	{
 		
 		/* ======================== When Creating ========================= */
-		playSound(getSound(8));
+		
 		
 	}
 	
